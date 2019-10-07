@@ -14,7 +14,7 @@ after_success:
   - docker build -t tamiradler/multi-server ./server
   - docker build -t tamiradler/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push tamiradler/multi-client
   - docker push tamiradler/multi-nginx
   - docker push tamiradler/multi-server
   - docker push tamiradler/multi-worker
+  - docker push tamiradler/multi-client
